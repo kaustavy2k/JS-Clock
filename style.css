@@ -22,7 +22,7 @@ html{
     color: gray;
     display: flex;
     justify-content: space-evenly;
-    margin-bottom: 30px;
+    margin-bottom: 90px;
     
 }
 #days .active{
