@@ -14,8 +14,9 @@ html{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    margin-top: 50px;
+    padding-top: 15%;
+    position: relative;
+    height: 100vh;
 }
 /*--------DAYS---------*/
 #days{
@@ -32,12 +33,11 @@ html{
 }
 /*--------DATE---------*/
 #date{
-    margin-bottom: 80px;
+    margin-bottom: 50px;
 }
 /*--------TIME---------*/
 #time{
     font-family: sans-serif;
-    margin-bottom: 35%;
     font-size: 53px;
 }
 #am-pm{
@@ -50,6 +50,8 @@ html{
     display: flex;
     justify-content: center;
     width: 100%;
+    position: absolute;
+    bottom: 0;
 }
 span{
     display: inline-block;
@@ -87,5 +89,5 @@ span:hover{
     background-color: rgb(253, 168, 168);
 }
 .color8{
-    background-color: darkslategrey;
+    background-color: rgb(161, 204, 6);
 }

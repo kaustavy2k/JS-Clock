@@ -117,7 +117,7 @@
         let cur_week=document.querySelector(".active");
         let color=document.querySelectorAll("span");
         let h=document.querySelector("html");
-        let color_list=['rgb(255, 209, 124)','red','royalblue','rgb(73, 170, 170)','yellow','brown','rgb(253, 168, 168)','darkslategray'];
+        let color_list=['rgb(255, 209, 124)','red','royalblue','rgb(73, 170, 170)','yellow','brown','rgb(253, 168, 168)','rgb(161, 204, 6)'];
         color.forEach(function(element,index){
             element.addEventListener("click", function(e){
                 let current=document.getElementsByClassName("activecolor");
