@@ -17,6 +17,7 @@ html{
     padding-top: 15%;
     position: relative;
     height: 100vh;
+    overflow: auto;
 }
 /*--------DAYS---------*/
 #days{
@@ -51,7 +52,7 @@ html{
     justify-content: center;
     width: 100%;
     position: absolute;
-    bottom: 30px;
+    bottom: 10px;
 }
 span{
     display: inline-block;
