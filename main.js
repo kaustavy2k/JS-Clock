@@ -114,14 +114,17 @@
                 }
                 col.appendChild(node);
         }
+        let cur_week=document.querySelector(".active");
         let color=document.querySelectorAll("span");
-        let color_list=['rgb(255, 209, 124)','red','royalblue','teal','yellow','brown','rgb(253, 168, 168)','darkslategray'];
+        let h=document.querySelector("html");
+        let color_list=['rgb(255, 209, 124)','red','royalblue','rgb(73, 170, 170)','yellow','brown','rgb(253, 168, 168)','darkslategray'];
         color.forEach(function(element,index){
             element.addEventListener("click", function(e){
                 let current=document.getElementsByClassName("activecolor");
                 current[0].className=current[0].className.replace(" activecolor","");
                 e.target.className+=" activecolor";
-                document.querySelector("html").style.color=color_list[index];
+                h.style.color=color_list[index];
+                cur_week.style.color=color_list[index];
             })
         })
     }

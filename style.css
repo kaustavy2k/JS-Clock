@@ -25,7 +25,7 @@ html{
     margin-bottom: 120px;
 }
 #days .active{
-    color: wheat;
+    color: rgb(255, 209, 124);
 }
 #days .diff-days{
     margin: 2%;
@@ -37,7 +37,7 @@ html{
 /*--------TIME---------*/
 #time{
     font-family: sans-serif;
-    margin-bottom: 140px;
+    margin-bottom: 35%;
     font-size: 53px;
 }
 #am-pm{
@@ -75,7 +75,7 @@ span:hover{
     background-color: royalblue;
 }
 .color4{
-    background-color: teal;
+    background-color: rgb(73, 170, 170);
 }
 .color5{
     background-color: yellow;
