@@ -1,0 +1,90 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html{
+    font-family: 'Lemonada', sans-serif;
+    background-color: rgb(26, 25, 25);
+    font-weight: bolder;
+    color: rgb(255, 209, 124);
+}
+/*--------CONTENT-------*/
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 150px;
+}
+/*--------DAYS---------*/
+#days{
+    color: gray;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 120px;
+}
+#days .active{
+    color: wheat;
+}
+#days .diff-days{
+    margin: 15px;
+}
+/*--------DATE---------*/
+#date{
+    margin-bottom: 100px;
+}
+/*--------TIME---------*/
+#time{
+    font-family: sans-serif;
+    margin-bottom: 300px;
+    font-size: 60px;
+}
+#am-pm{
+    display: inline-block;
+    font-size: 20px;
+   
+}
+/*--------COLOR---------*/
+#color{
+    display: flex;
+    justify-content: space-around;
+    width: 500px;
+}
+span{
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: green;
+}
+span:hover{
+    cursor: pointer;
+}
+.activecolor{
+    border: 2px solid white;
+}
+.color1{
+    background-color: rgb(255, 209, 124); ;
+}
+.color2{
+    background-color: red;
+}
+.color3{
+    background-color: royalblue;
+}
+.color4{
+    background-color: teal;
+}
+.color5{
+    background-color: yellow;
+}
+.color6{
+    background-color: brown;
+}
+.color7{
+    background-color: rgb(253, 168, 168);
+}
+.color8{
+    background-color: darkslategrey;
+}
