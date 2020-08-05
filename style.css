@@ -15,15 +15,15 @@ html{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 80vh;
-    overflow: auto;
+    background-color: whitesmoke;
+  
 }
 /*--------DAYS---------*/
 #days{
     color: gray;
     display: flex;
     justify-content: space-evenly;
-    margin-bottom: 80px;
+    margin-bottom: 30px;
     
 }
 #days .active{
@@ -34,6 +34,7 @@ html{
 }
 /*--------DATE---------*/
 #date{
+    margin-top: 80px;
     margin-bottom: 20px;
 }
 /*--------TIME---------*/
