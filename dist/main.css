@@ -2,7 +2,7 @@
 
 #time{font-family:sans-serif;font-size:53px;margin-bottom:200px}#am-pm{display:inline-block;font-size:20px}
 
-#color{display:flex;justify-content:center;width:100%}span{display:inline-block;height:45px;width:45px;border-radius:100px;background-color:green;margin:1%}span:hover{cursor:pointer}.activecolor{border:2px solid white}.color1{background-color:#ffd17c}.color2{background-color:black}.color3{background-color:royalblue}.color4{background-color:#49aaaa}.color5{background-color:yellow}.color6{background-color:brown}.color7{background-color:#fda8a8}.color8{background-color:#88a12c}
+#color{display:flex;justify-content:center;width:100%}span{display:inline-block;height:45px;width:45px;border-radius:100px;background-color:green;margin:1%}span:hover{cursor:pointer}.activecolor{border:2px solid white}.color1{background-color:#ffd17c}.color2{background-color:red}.color3{background-color:royalblue}.color4{background-color:#49aaaa}.color5{background-color:yellow}.color6{background-color:brown}.color7{background-color:#fda8a8}.color8{background-color:#88a12c}
 
 #date{margin-top:80px;margin-bottom:20px}
 
