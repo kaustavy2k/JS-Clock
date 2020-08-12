@@ -1,6 +1,14 @@
 import "./time.scss";
 function time(){
-    let time=document.getElementById("time");
+    let t=document.getElementById("time");
+    let ids=["clock", "options"];
+    for(let i=0; i<ids.length;i++){
+        let node=document.createElement("DIV");
+        node.id=ids[i];
+        t.appendChild(node);
+    }
+    
+    let time=document.getElementById("clock");
     function clock(){
         let today=new Date();
         let hour=today.getHours();
@@ -18,7 +26,9 @@ function time(){
         }
         
         hour<10?(hour='0'+hour):(hour=hour);
-
+        if(hour==0){
+            hour=12;
+        }
         let minute=today.getMinutes();
         minute<10?(minute='0'+minute):(minute=minute);
 
@@ -30,6 +40,19 @@ function time(){
         setTimeout(clock, 1000);
     }
     clock();
+
+    let c=document.getElementById("options");
+    let classes=["curr-clock","stopwatch"];
+    let names=["CLOCK","STOPWATCH"]
+    for(let i=0; i<2;i++){
+        let node=document.createElement("BUTTON");
+        node.classList.add(classes[i])
+        if(i==0){
+            node.classList.add('activeoption');
+        }
+        node.textContent=names[i];
+        c.appendChild(node);
+    }
 }
 
 export {time};
