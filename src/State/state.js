@@ -15,6 +15,7 @@ let counter=0;
 let temp=[];
 let node;
 let lapstopper=0;
+let lapstarter=0;
 function state_manage(){
     time=document.getElementById("clock_sw");
     let l=document.getElementById("lap_record");
@@ -72,10 +73,12 @@ function laptimer(){
 
 function start(){
     if(stopper==1){
+        lapstarter=1
         time=document.getElementById("clock_sw");
         time.textContent=(min<10?"0"+min:min)+":"+(sec<10?"0"+sec:sec)+":"+(ms<10?"0"+ms:ms);
     }
     else{
+        lapstarter=1
         flag++;
         state_manage();
         laptimer();
@@ -104,28 +107,32 @@ function reset(){
     mslap=0;
     seclap=0;
     minlap=0;
+    lapstarter=0;
     while(l.firstChild){
         l.removeChild(l.firstChild);
     }
 }
 
 function lap(){
-    if(counter!=1){
-        i++;
-        lapstopper=1;
-        mslap=0;
-        seclap=0;
-        minlap=0;
-        if(i<=2){
-        let check=(min<10?"0"+min:min)+":"+(sec<10?"0"+sec:sec)+":"+(ms<10?"0"+ms:ms);
-        node.innerHTML=`<span id="laptime">LAP 1 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;${check}</span>`;
+    if(lapstarter==1){
+        if(counter!=1){
+            i++;
+            lapstopper=1;
+            mslap=0;
+            seclap=0;
+            minlap=0;
+            if(i<=2){
+            let check=(min<10?"0"+min:min)+":"+(sec<10?"0"+sec:sec)+":"+(ms<10?"0"+ms:ms);
+            node.innerHTML=`<span id="laptime">LAP 1 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;${check}</span>`;
+            }
+            let l=document.getElementById("lap_record");
+            node=document.createElement("DIV");
+            node.id="laps";
+            l.appendChild(node);
+            temp.push(node);
+            laptimer();
         }
-        let l=document.getElementById("lap_record");
-        node=document.createElement("DIV");
-        node.id="laps";
-        l.appendChild(node);
-        temp.push(node);
-        laptimer();
     }
+    
 }
 export {lap,start,stop,reset,flag,temp};
