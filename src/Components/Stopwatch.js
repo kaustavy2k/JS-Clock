@@ -1,9 +1,9 @@
 import "./Stopwatch.scss";
-import {start,stop,reset,flag} from "../State/state";
+import {lap,start,stop,reset,flag,temp} from "../State/state";
+let stopper=0;
 function stopwatch(){
-    
     let t=document.getElementById("time_sw");
-    let ids=["options_sw","clock_sw", "timer_option"];
+    let ids=["options_sw","clock_sw", "timer_option","lap_record"];
     for(let i=0; i<ids.length;i++){
         let node=document.createElement("DIV");
         node.id=ids[i];
@@ -13,16 +13,18 @@ function stopwatch(){
     let time=document.getElementById("clock_sw");
     if(flag==0){
         time.textContent="00:00:00";
+        for(let i=0; i<temp.length; i++){
+            d.appendChild(temp[i]);
+       }
     }
     else{
+        stopper=1;
         start();
+        let d=document.getElementById("lap_record");
+        for(let i=0; i<temp.length; i++){
+            d.appendChild(temp[i]);
+        }
     }
-    // let idt=["min","sec","ms"];
-    // for(let i=0; i<3;i++){
-    //     let node=document.createElement("SPAN");
-    //     node.id=ids[i];
-    //     time.appendChild(node);
-    // }
 
     let c=document.getElementById("options_sw");
     let classes=["curr-clock_sw","stopwatch_sw"];
@@ -46,46 +48,22 @@ function stopwatch(){
         node.textContent=namx[i];
         k.appendChild(node);
     }
-
-    // let ms=0;
-    // let sec=0;
-    // let min=0;
-    //function startTimer(){
-        // time.textContent=(min<10?"0"+min:min)+":"+(sec<10?"0"+sec:sec)+":"+(ms<10?"0"+ms:ms);
-        // ms++;
-        // if(ms==100){
-        //     ms=0;
-        //     sec++;
-        // }
-        // if(sec==60){
-        //     sec=0;
-        //     min++;
-        // }
-   // }
-    //let interval;
-    //et count=flag;
     document.getElementById("start").addEventListener("click", ()=>{
-        //count+=1;
-        //if(count==1){
-            start();
-        //}
-        //interval=setInterval(startTimer);
+        stopper=0;
+        start();
     });
     document.getElementById("stop").addEventListener("click", ()=>{
-        //count=0
+        stopper=0;
         stop();
     });
     document.getElementById("reset").addEventListener("click", ()=>{
-        // time.textContent="00:00:00";
-        // clearInterval(interval);
-        // ms=0;
-        // sec=0;
-        // min=0;
-        //count=0;
         reset();
+    });
+    document.getElementById("lap").addEventListener("click", ()=>{
+        lap();
     });
 }
 
-export {stopwatch};
+export {stopwatch,stopper};
 
 
