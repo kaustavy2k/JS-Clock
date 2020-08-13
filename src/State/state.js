@@ -25,7 +25,7 @@ function state_manage(){
         node=document.createElement("DIV");
         node.id="laps";
         l.appendChild(node);
-        temp.push(node);
+        temp.unshift(node);
     }
     function set_timer(){
         let check=(min<10?"0"+min:min)+":"+(sec<10?"0"+sec:sec)+":"+(ms<10?"0"+ms:ms);
@@ -121,15 +121,17 @@ function lap(){
             mslap=0;
             seclap=0;
             minlap=0;
+            let check;
             if(i<=2){
-            let check=(min<10?"0"+min:min)+":"+(sec<10?"0"+sec:sec)+":"+(ms<10?"0"+ms:ms);
+            check=(min<10?"0"+min:min)+":"+(sec<10?"0"+sec:sec)+":"+(ms<10?"0"+ms:ms);
             node.innerHTML=`<span id="laptime">LAP 1 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;${check}</span>`;
             }
             let l=document.getElementById("lap_record");
             node=document.createElement("DIV");
             node.id="laps";
-            l.appendChild(node);
-            temp.push(node);
+            node.innerHTML=`<span id="laptime">LAP ${i}</span>`;
+            l.insertBefore(node,l.childNodes[0]);
+            temp.unshift(node);
             laptimer();
         }
     }
