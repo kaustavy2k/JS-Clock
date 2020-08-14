@@ -16,6 +16,8 @@ let temp=[];
 let node;
 let lapstopper=0;
 let lapstarter=0;
+let name1="START";
+let name2="LAP";
 function state_manage(){
     time=document.getElementById("clock_sw");
     let l=document.getElementById("lap_record");
@@ -73,11 +75,15 @@ function laptimer(){
 
 function start(){
     if(stopper==1){
+        name1=name1;
+        name2=name2;
         lapstarter=1
         time=document.getElementById("clock_sw");
         time.textContent=(min<10?"0"+min:min)+":"+(sec<10?"0"+sec:sec)+":"+(ms<10?"0"+ms:ms);
     }
     else{
+        name1="STOP";
+        name2="LAP";
         lapstarter=1
         flag++;
         state_manage();
@@ -85,11 +91,14 @@ function start(){
     }
 }
 function stop(){
+    name1="START";
+    name2="RESET";
     clearInterval(interval);
     clearInterval(intervallap);
     counter=1;
 }
 function reset(){
+    name2="LAP";
     lapstopper=0;
     flag=0;
     let l=document.getElementById("lap_record");
@@ -137,4 +146,4 @@ function lap(){
     }
     
 }
-export {lap,start,stop,reset,flag,temp};
+export {lap,start,stop,reset,flag,temp,name1,name2};

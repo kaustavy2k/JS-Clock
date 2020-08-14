@@ -1,4 +1,5 @@
 import "./days.scss";
+import {icurr} from "../color/applycolor";
 function days(){
     let today=new Date();
     let w=today.getDay();
@@ -27,6 +28,11 @@ function days(){
         let text=document.createTextNode(days[i]);
         node.appendChild(text);
         d.appendChild(node);
+        if(days[i]==week){
+            let color_list=['rgb(255, 209, 124)','red','royalblue','rgb(73, 170, 170)','yellow','brown','rgb(253, 168, 168)','rgb(136, 161, 44)'];
+            let cur_week=document.querySelector(".active");
+            cur_week.style.color=color_list[icurr];
+        }
     }
 }
 export {days};

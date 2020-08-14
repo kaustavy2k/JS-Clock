@@ -1,11 +1,12 @@
 import "./applycolor.scss";
+let icurr=0;
 function color(){
     let col=document.getElementById("color");
-    for(let i=1;i<=8;i++){
+    for(let i=0;i<=7;i++){
             let node=document.createElement("SPAN");
             node.classList.add("colors");
             node.classList.add('color'+i);
-            if(i==1){
+            if(i==icurr){
                 node.className+=" activecolor";
             }
             col.appendChild(node);
@@ -19,9 +20,10 @@ function color(){
             let current=document.getElementsByClassName("activecolor");
             current[0].className=current[0].className.replace(" activecolor","");
             e.target.className+=" activecolor";
+            icurr=index;
             h.style.color=color_list[index];
             cur_week.style.color=color_list[index];
         })
     })
 }
-export {color};
+export {color,icurr};
