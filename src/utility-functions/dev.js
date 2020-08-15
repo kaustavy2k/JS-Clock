@@ -21,7 +21,8 @@ function div_create_clk(){
     p.className="content";
     body.appendChild(p);
     let d=document.querySelector(".content");
-    let ids=["date","days","time","color"];
+    //let ids=["date","days","time","color"];
+    let ids=["date","days","clock","color-options"];
     for(let i=0; i<ids.length;i++){
         let node=document.createElement("DIV");
         node.id=ids[i];

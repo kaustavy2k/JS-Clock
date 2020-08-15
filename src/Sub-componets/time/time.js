@@ -1,7 +1,15 @@
 import "./time.scss";
 function time(){
-    let t=document.getElementById("time");
-    let ids=["clock", "options"];
+    // let t=document.getElementById("time");
+    // let ids=["clock", "options"];
+    // for(let i=0; i<ids.length;i++){
+    //     let node=document.createElement("DIV");
+    //     node.id=ids[i];
+    //     t.appendChild(node);
+    // }
+
+    let t=document.getElementById("color-options");
+    let ids=["color", "options"];
     for(let i=0; i<ids.length;i++){
         let node=document.createElement("DIV");
         node.id=ids[i];

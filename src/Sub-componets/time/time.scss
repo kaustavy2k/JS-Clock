@@ -17,22 +17,31 @@
          }
     
 }
-#time{
+#color-options{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    margin-bottom: 150px;
+    //background-color: red;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    //margin-bottom: 150px;
+    //background-color: blue;
 }
 #options{
+    //background-color: brown;
+    margin-top: 20px;
     height: 40px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
 
     .curr-clock{
         @include btn;
+        margin: 0 10px 0 10px;
     }
     .stopwatch{
         @include btn;
+        margin: 0 10px 0 10px;
     }
     .activeoption{
         color: white;
@@ -43,7 +52,7 @@
 #clock{
     font-family: sans-serif;
     font-size: 53px;
-    margin-bottom: 50px;
+    margin-top: 50px;
     
 }
 #am-pm{

@@ -18,11 +18,18 @@ import {div_remove_clk, div_remove_swatch, div_create_clk, div_create_swatch} fr
     //TIME
     time();
     //COLOR 
-    color();
+    color(0);
     document.querySelector(".stopwatch").addEventListener("click", ()=> {
         swatch_calling();
     
     });
+
+
+    // div_create_swatch();
+
+    //     //STOPWATCH
+    //     stopwatch();
+    //     color();
 
 })();
 
@@ -38,7 +45,7 @@ function clock_calling(){
         //TIME
         time();
         //COLOR 
-        color();
+        color(0);
         document.querySelector(".stopwatch").addEventListener("click", ()=> {
         swatch_calling();
     });
@@ -53,6 +60,9 @@ function swatch_calling(){
 
         //STOPWATCH
         stopwatch();
+
+        //COLOR
+        color(1);
 
         document.querySelector(".curr-clock_sw").addEventListener("click", ()=> {
         clock_calling();

@@ -138,7 +138,7 @@ function lap(){
             let l=document.getElementById("lap_record");
             node=document.createElement("DIV");
             node.id="laps";
-            node.innerHTML=`<span id="laptime">LAP ${i}</span>`;
+           node.innerHTML=`<span id="laptime">  LAP ${i} &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;00:00:00</span>`;
             l.insertBefore(node,l.childNodes[0]);
             temp.unshift(node);
             laptimer();
