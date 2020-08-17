@@ -1,6 +1,6 @@
 /*--------TIME---------*/
 @mixin btn {
-         font-family: fantasy;
+         font-family: 'Lemonada','fantasy';
          width: 140px;
          border-radius: 100px;
          color:rgb(114, 98, 69);
@@ -21,15 +21,11 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    //background-color: red;
     position: fixed;
     bottom: 0;
     width: 100%;
-    //margin-bottom: 150px;
-    //background-color: blue;
 }
 #options{
-    //background-color: brown;
     margin-top: 20px;
     height: 40px;
     display: flex;

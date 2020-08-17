@@ -13,7 +13,7 @@ module.exports={
     //     port:3000,
     //     hot: true
     // },
-    watch:true,
+    //watch:true,
     plugins:[new MiniCssExtractPlugin(),
         new HtmlWebpackPlugin({
             template: './index.html'
@@ -21,7 +21,7 @@ module.exports={
     module:{
         rules:[
             {
-                test: /\.scss/,
+                test: /\.scss$/,
                 use:[MiniCssExtractPlugin.loader,
                     'css-loader',
                     'sass-loader'
@@ -31,6 +31,20 @@ module.exports={
                 test: /\.js$/,
                 enforce: 'pre',
                 use: ['source-map-loader']
+              },
+               {
+                    test :/\.html/,
+                    use:['html-loader']
+                },
+                 {
+                  test:/\.(svg|png|jpeg|gif|jpg)$/,
+                  use: {
+                    loader:'file-loader',
+                    options:{
+                        name:"[name].[ext]",
+                        outputPath:"img/",
+                        }
+                    }
               }
         ]
     }

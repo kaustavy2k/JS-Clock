@@ -2,7 +2,7 @@
 @mixin btn {
     margin-left: 5px;
     margin-right: 5px;
-    font-family: fantasy;
+    font-family: 'Lemonada','fantasy';
     width: 140px;
     border-radius: 100px;
     color:rgb(114, 98, 69);
@@ -19,7 +19,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    //background-color: red;
   
 }
 /*-----TIME-SW----*/
@@ -32,12 +31,6 @@
 }
 /*-----OPTIONS-SW----*/
 #options_sw{
-    // position: fixed;
-    // bottom: 0;
-    // width: 100%;
-    //background-color: white;
-    //margin-top: 50px;
-    //margin-bottom: 90px;
     margin-top: 20px;
     height: 40px;
     display: flex;
@@ -69,7 +62,6 @@
 /*-----TIMER-OPTIONS----*/
 #timer_option{
     width: 100%;
-   // background-color: white;
     margin-top: 50px;
     margin-bottom: 20px;
     height: 70px;
@@ -114,9 +106,6 @@ margin-top: 80px;
     height: 250px;
     overflow: auto;
     width: 100%;
-    //display: flex;
-   // flex-direction: column;
-    //justify-content: flex-start;
     &::-webkit-scrollbar { 
         display: none; 
     } 
@@ -127,14 +116,10 @@ margin-top: 80px;
     margin: 10px auto;
     border-bottom: 2px solid wheat;
     font-family: monospace;
-    //background-color: brown;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 20px;
-}
-#laptime{
-    //margin-left: 5px;
 }
 /*-----MEDIA-HOVER----*/
 @media (hover:hover){
